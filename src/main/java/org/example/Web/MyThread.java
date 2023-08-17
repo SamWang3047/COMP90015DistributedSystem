@@ -19,8 +19,7 @@ class MyThread extends Thread {
             /*
              InputStream：以字节为单位 InputStreamReader：以字符为单位
              BufferedReader： 以行为为单位进行处理（\r \r\n)
-
-               */
+             */
             BufferedReader in = new BufferedReader(new InputStreamReader(inStream));
             PrintWriter out = new PrintWriter(outStream);
 
