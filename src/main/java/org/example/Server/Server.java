@@ -1,4 +1,4 @@
-package org.example.Web.ThreadPool;
+package org.example.Server;
 
 import java.net.ServerSocket;
 import java.net.Socket;
