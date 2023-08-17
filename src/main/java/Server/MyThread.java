@@ -1,4 +1,4 @@
-package org.example.Server;
+package Server;
 
 // 服务端程序
 // 客户端程序与多线程版客户端程序一样
@@ -7,8 +7,6 @@ import java.net.*;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
-// 通过实现Runnable接口来创建多线程
 class MyThread implements Runnable{
     private Socket clientSocket;
 

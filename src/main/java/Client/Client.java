@@ -1,4 +1,4 @@
-package org.example.Client;
+package Client;
 // 客户端程序
 import java.io.*;
 import java.net.*;
