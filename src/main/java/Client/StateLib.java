@@ -1,6 +1,6 @@
 package Client;
 
-public class State {
+public class StateLib {
     // command
     public final static int QUERY = 0;
     public final static int ADD = 1;
