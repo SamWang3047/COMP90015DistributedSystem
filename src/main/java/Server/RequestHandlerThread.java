@@ -1,17 +1,18 @@
 package Server;
 
-// 服务端程序
-// 客户端程序与多线程版客户端程序一样
 import java.io.*;
 import java.net.*;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-class MyThread implements Runnable{
+
+class RequestHandlerThread implements Runnable{
+    private Dictionary dictionary;
     private Socket clientSocket;
 
-    MyThread(Socket client) {
-        clientSocket = client;
+    private DictionaryServer server;
+
+    public RequestHandlerThread(Socket client, Dictionary dictionary, DictionaryServer server) {
+        this.clientSocket = client;
+        this.dictionary = dictionary;
+        this.server = server;
     }
 
     public void run()  {

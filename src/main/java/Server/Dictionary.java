@@ -40,6 +40,7 @@ public class Dictionary {
             return false;
         } else {
             dictionaryJSON.put(wordName, wordMeaning);
+            updateLocalJSON();
             return true;
         }
     }
@@ -47,6 +48,7 @@ public class Dictionary {
     public synchronized boolean remove(String wordName) {
         if (dictionaryJSON.containsKey(wordName)) {
             dictionaryJSON.remove(wordName);
+            updateLocalJSON();
             return true;
         } else {
             return false;
